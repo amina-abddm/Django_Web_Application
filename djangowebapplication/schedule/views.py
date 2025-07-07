@@ -10,7 +10,7 @@ from django.contrib.auth.models import Group
 def home(request):
     # On peut envoyer des informations au template via un dictionnaire (contexte)
     context = {
-        'coach_name': 'Jean Dupont',
+        'coach_name': 'MyCoach',
         'services': [
             'Coaching individuel',
             'Ateliers de groupe',

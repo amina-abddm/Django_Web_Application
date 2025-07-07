@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>📅 Prendre un rendez-vous</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Valider le rendez-vous ✅</button>
+  </form>
+
+  <a href="{% url 'dashboard' %}">⬅ Retour au tableau de bord</a>
+{% endblock %}
