@@ -75,6 +75,7 @@ python manage.py runserver
 ```
 
 **➡️ Accédez à l'application via : http://127.0.0.1:8000/schedule/accueil/**
+
 ---
 
 ## ✅ Accès Admin
@@ -82,8 +83,10 @@ python manage.py runserver
 **➡️ Visitez : http://127.0.0.1:8000/admin/**
 
 Ajoutez un groupe coach et associez les utilisateurs coach à ce groupe.
+
 ---
-## ✨ Améliorations possibles
+
+## ✨Améliorations possibles
 
 - Ajouter des notifications email
 - Calendrier dynamique avec disponibilité
