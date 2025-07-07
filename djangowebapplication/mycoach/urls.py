@@ -20,5 +20,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('schedule.urls')),  # La racine du site va pointer vers schedule.urls
-]
+    path('schedule/', include('schedule.urls')),  # <-- La racine du site va pointer vers schedule.urls
+] 

@@ -1,0 +1,9 @@
+{% extends "schedule/base.html" %}
+
+{% block title %}Déconnexion{% endblock %}
+
+{% block content %}
+  <h2>Vous avez été déconnecté(e).</h2>
+  <p><a href="{% url 'login' %}">Se reconnecter</a></p>
+  <p><a href="{% url 'home' %}">Retour à l’accueil</a></p>
+{% endblock %}

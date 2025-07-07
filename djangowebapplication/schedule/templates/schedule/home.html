@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Accueil - Coach Jean Dupont</title>
-</head>
-<body>
-    <h1>Bienvenue chez {{ coach_name }}</h1>
-    <h2>Nos services</h2>
+{% extends "schedule/base.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+    <h2>Bienvenue chez {{ coach_name }}</h2>
+
+    <h3>Nos services :</h3>
     <ul>
         {% for service in services %}
-        <li>{{ service }}</li>
+            <li>{{ service }}</li>
         {% endfor %}
     </ul>
+
     <p>Horaires : {{ hours }}</p>
-</body>
-</html>
+{% endblock %}
+
