@@ -122,5 +122,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/schedule/'
-LOGOUT_REDIRECT_URL = '/schedule/'
+# Authentication settings
+
+LOGIN_URL = '/schedule/login/'   # URL de la page de connexion
+LOGIN_REDIRECT_URL = '/schedule/dashboard/'  # URL vers laquelle rediriger après connexion
+LOGOUT_REDIRECT_URL = '/schedule/login/'  # URL vers laquelle rediriger après déconnexion
+
