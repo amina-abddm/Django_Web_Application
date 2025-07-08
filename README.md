@@ -90,6 +90,6 @@ Ajoutez un groupe coach et associez les utilisateurs coach à ce groupe.
 
 - Ajouter des notifications email
 - Calendrier dynamique avec disponibilité
-- Design responsive & amélioré (Bootstrap, Tailwind, etc.)
+- Design responsive & amélioré
 - Historique des séances pour le client
 
