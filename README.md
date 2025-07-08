@@ -31,6 +31,45 @@ MyCoach est une application web Django permettant à des clients de **prendre re
 
 ## 📂 Structure
 
+```bash
+mycoach/
+│
+├── manage.py # Commande principale Django
+├── db.sqlite3 # Base de données SQLite
+├── README.md # Documentation du projet
+├── requirements.txt # Dépendances (à générer avec pip freeze > requirements.txt)
+│
+├── mycoach/ # Configuration principale du projet Django
+│ ├── init.py
+│ ├── settings.py # Paramètres globaux du projet
+│ ├── urls.py # Routes principales du projet
+│ ├── wsgi.py
+│ └── asgi.py
+│
+├── schedule/ # Application principale "schedule"
+│ ├── migrations/ # Fichiers de migration pour la BDD
+│ │ └── init.py
+│ ├── templates/ # Dossiers des templates HTML
+│ │ └── schedule/
+│ │ ├── base.html
+│ │ ├── home.html
+│ │ ├── dashboard_client.html
+│ │ ├── dashboard_coach.html
+│ │ ├── prise_rdv.html
+│ │ └── authentification/
+│ │ ├── login.html
+│ │ ├── signup.html
+│ │ └── logout.html
+│ ├── init.py
+│ ├── admin.py # Enregistrement des modèles dans l'admin
+│ ├── apps.py
+│ ├── forms.py # Formulaires personnalisés
+│ ├── models.py # Modèles (ex: Seance)
+│ ├── tests.py
+│ └── views.py # Logique des vues (dashboard, prise de rendez-vous, etc.)
+
+```
+
 ---
 
 ## 🧑‍💻 Installation et lancement
