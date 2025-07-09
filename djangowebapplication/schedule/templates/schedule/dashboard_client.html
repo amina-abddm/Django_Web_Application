@@ -1,2 +1,24 @@
+{% extends "schedule/base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/style_dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+{% endblock %}
+
+{% block header %}
+    {% include "schedule/header.html" %}
+{% endblock %}
+
+{% block footer %}
+    {% include "schedule/footer.html" %}
+{% endblock %}
+
+
+{% block title %}Bienvenue dans votre espace client{% endblock %}
+
+{% block content %}
 <h2>Bienvenue dans votre espace client</h2>
 <p>Pour planifier votre prochaine séance, veuillez <a href="{% url 'prendre_rdv' %}">prendre rendez-vous ici</a>.</p>
+<p>Pour revenir à l'accueil, veuillez <a href="{% url 'home' %}">cliquer ici</a>.</p>
+{% endblock %}

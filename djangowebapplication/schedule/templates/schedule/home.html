@@ -1,17 +1,33 @@
 {% extends "schedule/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_global.css' %}">
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/style_accueil.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome/css/all.min.css' %}">
+{% endblock %}
+
+{% block header %}
+    {% include "schedule/header.html" %}
+{% endblock %}
+
+{% block footer %}
+    {% include "schedule/footer.html" %}
+{% endblock %}
 
 {% block title %}Accueil{% endblock %}
 
 {% block content %}
-    <h2>Bienvenue chez {{ coach_name }}</h2>
+    <div class="accueil-container">
+        <h2 class="title-accueil"><i class="fas fa-handshake"></i> Bienvenue chez {{ coach_name }}</h2>
 
-    <h3>Nos services :</h3>
-    <ul>
-        {% for service in services %}
-            <li>{{ service }}</li>
-        {% endfor %}
-    </ul>
+        <h3><i class="fas fa-dumbbell"></i> Nos services :</h3>
+        <ul class="liste-services">
+            {% for service in services %}
+                <li><i class="fas fa-check-circle"></i> {{ service }}</li>
+            {% endfor %}
+        </ul>
 
-    <p>Horaires : {{ hours }}</p>
+        <p><i class="fas fa-clock"></i> Horaires : {{ hours }}</p>
+    </div>
 {% endblock %}
-
