@@ -20,5 +20,9 @@ urlpatterns = [
     
     # Nouvelle URL prise de rendez-vous
     path('prendre-rdv/', views.prendre_rdv, name='prendre_rdv'),
+    
+    # Historique des séances pour les clients
+    path('historique/', views.historique_client, name='historique_client'),
+
 ]
 

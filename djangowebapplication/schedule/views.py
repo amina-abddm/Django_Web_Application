@@ -16,7 +16,7 @@ def home(request):
             'Ateliers de groupe',
             'Suivi en ligne',
         ],
-        'hours': 'Lundi à Vendredi, 9h - 18h',
+        'hours': 'Lundi à Vendredi de 9h à 18h',
     }
     return render(request, 'schedule/home.html', context)
 
@@ -51,3 +51,8 @@ def prendre_rdv(request):
         form = SeanceForm()
     
     return render(request, 'schedule/prise_rdv.html', {'form': form})
+
+@login_required
+def historique_client(request):
+    seances = Seance.objects.filter(client=request.user).order_by('-date', '-heure_debut')
+    return render(request, 'schedule/historique_client.html', {'seances': seances})

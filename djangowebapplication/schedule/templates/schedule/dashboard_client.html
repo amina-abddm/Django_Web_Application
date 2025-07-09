@@ -1,9 +1,8 @@
 {% extends "schedule/base.html" %}
 {% load static %}
+
 {% block head %}
-    <link rel="stylesheet" href="{% static 'css/style_dashboard.css' %}">
-    <link rel="stylesheet" href="{% static 'css/fontawesome/css/all.min.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style_global.css' %}">
 {% endblock %}
 
 {% block header %}
@@ -14,11 +13,22 @@
     {% include "schedule/footer.html" %}
 {% endblock %}
 
-
-{% block title %}Bienvenue dans votre espace client{% endblock %}
+{% block title %}Espace client - MyCoach{% endblock %}
 
 {% block content %}
-<h2>Bienvenue dans votre espace client</h2>
-<p>Pour planifier votre prochaine séance, veuillez <a href="{% url 'prendre_rdv' %}">prendre rendez-vous ici</a>.</p>
-<p>Pour revenir à l'accueil, veuillez <a href="{% url 'home' %}">cliquer ici</a>.</p>
+<div class="container">
+    <h2><i class="fas fa-user-circle"></i> Bienvenue dans votre espace client</h2>
+
+    <p><i class="fas fa-calendar-plus"></i> Pour planifier votre prochaine séance, veuillez  
+        <a href="{% url 'prendre_rdv' %}">prendre rendez-vous ici</a>.
+    </p>
+
+    <p><i class="fas fa-history"></i> Pour consulter votre historique de séances, veuillez  
+        <a href="{% url 'historique_client' %}">cliquer ici</a>.
+    </p>
+
+    <p><i class="fas fa-home"></i> Pour revenir à l'accueil, veuillez  
+        <a href="{% url 'home' %}">cliquer ici</a>.
+    </p>
+</div>
 {% endblock %}
