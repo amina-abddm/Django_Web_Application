@@ -56,3 +56,11 @@ def prendre_rdv(request):
 def historique_client(request):
     seances = Seance.objects.filter(client=request.user).order_by('-date', '-heure_debut')
     return render(request, 'schedule/historique_client.html', {'seances': seances})
+
+@login_required
+def historique_seances(request):
+    if request.user.groups.filter(name='coach').exists():
+        seances = Seance.objects.all()
+        return render(request, 'schedule/historique_seances.html', {'seances': seances})
+    else:
+        return redirect('dashboard')

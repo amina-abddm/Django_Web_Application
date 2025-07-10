@@ -23,6 +23,11 @@ urlpatterns = [
     
     # Historique des séances pour les clients
     path('historique/', views.historique_client, name='historique_client'),
+    
+    # Historique des séances pour les coachs
+    path('coach/seances/', views.historique_seances, name='historique_seances'),
+    
+
 
 ]
 

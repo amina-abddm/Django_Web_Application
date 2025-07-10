@@ -1,4 +1,31 @@
 {% extends "schedule/base.html" %}
 {% load static %}
 
-<h2>Bienvenue dans votre espace coach</h2>
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/style_global.css' %}">
+{% endblock %}
+
+{% block header %}
+    {% include "schedule/header.html" %}
+{% endblock %}
+
+{% block footer %}
+    {% include "schedule/footer.html" %}
+{% endblock %}
+
+{% block title %}Espace Professionnel - MyCoach{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2><i class="fas fa-user-circle"></i> Bienvenue dans votre espace Professionnel</h2>
+
+
+    <p><i class="fas fa-history"></i> Pour consulter votre agenda, veuillez  
+        <a href="{% url 'historique_seances' %}">cliquer ici</a>.
+    </p>
+
+    <p><i class="fas fa-home"></i> Pour revenir à l'accueil, veuillez  
+        <a href="{% url 'home' %}">cliquer ici</a>.
+    </p>
+</div>
+{% endblock %}
